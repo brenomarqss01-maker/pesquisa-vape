@@ -37,6 +37,9 @@ yarn-error.log*
 # typescript
 next-env.d.ts
 /dist/
+site-deploy.tar.gz
+css-check.png
+.chrome-css-check/
 /.wrangler/
 # Checkout-local execution profile and tool state; never publish them.
 /.sites-runtime/
