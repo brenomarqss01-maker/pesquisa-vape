@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "https://pesquisa-vape-pod.marqueszika777.chatgpt.site/:path*"
+    }
+  ]
+}
