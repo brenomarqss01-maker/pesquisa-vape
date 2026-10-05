@@ -1,0 +1,10 @@
+{
+  "name": "pesquisa-vape",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-worker.mjs",
+    "validate": "node scripts/validate-worker.mjs"
+  }
+}
