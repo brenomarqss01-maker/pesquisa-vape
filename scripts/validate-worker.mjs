@@ -35,10 +35,11 @@ const env = {
 const surveyResponse = await worker.default.fetch(new Request("https://example.test/api/responses", {
   method: "POST",
   headers: { "content-type": "application/json" },
-  body: JSON.stringify({ course: "Enfermagem", period: 4, contact: "Sim", frequency: "Às vezes", firstUseAge: "Nunca usei", firstReason: "Não se aplica — nunca usei", lessHarmful: "Não", knowsSubstances: "Algumas" }),
+  body: JSON.stringify({ course: "Enfermagem", period: 4, contact: "Sim", frequency: "Às vezes", firstUseAge: "Nunca usei", firstReason: "Não se aplica — nunca usei", lessHarmful: "Não", knowsSubstances: "Algumas", quitFailed: "Nunca usei", knowsAddiction: "Sim", secondhandHarm: "Sim" }),
 }), env);
 assert.equal(surveyResponse.status, 201);
 assert.equal(saved.length, 1);
+assert.equal(saved[0].length, 12);
 const loginResponse = await worker.default.fetch(new Request("https://example.test/api/management/login", { method: "POST", body: JSON.stringify({ password: "1290" }) }), env);
 assert.equal(loginResponse.status, 200);
 const cookie = loginResponse.headers.get("set-cookie").split(";")[0];
